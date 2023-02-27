@@ -3,21 +3,18 @@ name: "CodeQL - Minimal incremental analysis"
 on:
   push:
     branches:
-      - "master"  # Change this to the branch to default branch
+      - "main"  # Change this to the branch to default branch
       - "!ignore/branch" # Ignore CodeQL scan for these branches
       - "!test/*" # Ignore CodeQL scan for these branches
-    paths-ignore:
-      - '**/*.md'
-      - '**/*.txt'
   pull_request:
     branches:
-      - "master"  # Change this to the branch to default branch
+      - "main"  # Change this to the branch to default branch
     paths-ignore:
       - '**/*.md'
       - '**/*.txt'
   # If your project is not actively developed, consider scheduling CodeQL scans
   #schedule:
-  #  - cron: '44 23 * * 5' # Run CodeQL scan every Friday at 11:44 PM UTC
+  # - cron: '44 22 * * 5' # Run CodeQL scan every Friday at 10:44 PM UTC
   workflow_dispatch: 
     
 jobs:
