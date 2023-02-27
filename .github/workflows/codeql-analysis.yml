@@ -12,9 +12,13 @@ on:
   pull_request:
     branches:
       - "master"  # Change this to the branch to default branch
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.txt'
   # If your project is not actively developed, consider scheduling CodeQL scans
   #schedule:
   #  - cron: '44 23 * * 5' # Run CodeQL scan every Friday at 11:44 PM UTC
+  workflow_dispatch: 
     
 jobs:
   analyze:
